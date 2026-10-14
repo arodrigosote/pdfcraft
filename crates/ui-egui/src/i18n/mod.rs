@@ -393,7 +393,7 @@ fn detect_system_lang() -> Lang {
 }
 
 thread_local! {
-    // Per thread, as in ICASYS Foto: independent app and test threads (kittest harnesses run in
+    // Per thread, as in PhotoCraft: independent app and test threads (kittest harnesses run in
     // parallel) must not change each other's drawing language.
     static CURRENT: Cell<Lang> = const { Cell::new(Lang::EN) };
 }
@@ -1547,7 +1547,7 @@ mod tests {
         }
     }
 
-    /// Like ICASYS Foto's complete-catalog gates, derive coverage from the UI, not another language.
+    /// Like PhotoCraft's complete-catalog gates, derive coverage from the UI, not another language.
     #[test]
     fn simplified_chinese_covers_commands_and_catalogue() {
         let zh = Lang::from_code("zh-hans").expect("zh-hans registered");
