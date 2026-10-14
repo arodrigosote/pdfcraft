@@ -776,7 +776,7 @@
 	Files are combined from top to bottom. Leave Pages empty to take every page.	Datoteke se združijo od zgoraj navzdol. Če pustite Strani prazno, se vzamejo vse strani.
 	Files are combined in this order. Leave Pages empty to take every page.	Datoteke se združijo v tem vrstnem redu. Če pustite Strani prazno, se vzamejo vse strani.
 	Files for {name}	Datoteke za {name}
-	Files you open in ICASYS PDF appear here. Drop a PDF anywhere to open it.	Datoteke, ki jih odprete v ICASYS PDFu, se prikažejo tukaj. Spustite PDF kamor koli, da ga odprete.
+	Files you open in ICASYS PDF appear here. Drop a PDF anywhere to open it.	Datoteke, ki jih odprete v PdfCraftu, se prikažejo tukaj. Spustite PDF kamor koli, da ga odprete.
 	Fill	Izpolni
 	Fill & Sign	Izpolni in podpiši
 	Fill & Sign: add text	Izpolni in podpiši: dodaj besedilo
@@ -1456,7 +1456,7 @@
 	Rename	Preimenuj
 	Rename bookmark	Preimenuj zaznamek
 	Rendering: hayro (bootstrap) · UI: egui · Icons: Lucide (ISC) · Fonts: Inter, JetBrains Mono, Dancing Script (OFL)	Izris: hayro (bootstrap) · Vmesnik: egui · Ikone: Lucide (ISC) · Pisave: Inter, JetBrains Mono, Dancing Script (OFL)
-	Reopen the files that were open when ICASYS PDF last closed	Ponovno odpri datoteke, ki so bile odprte ob zadnjem zaprtju ICASYS PDFa
+	Reopen the files that were open when ICASYS PDF last closed	Ponovno odpri datoteke, ki so bile odprte ob zadnjem zaprtju PdfCrafta
 	Repair log	Dnevnik popravil
 	Repairs	Popravila
 	Repeat overlay text	Ponovi besedilo prekrivanja
@@ -1957,7 +1957,7 @@
 	Warnings	Opozorila
 	Watermark	Vodni žig
 	Weak	Šibko
-	Welcome to ICASYS PDF	Dobrodošli v ICASYS PDFu
+	Welcome to ICASYS PDF	Dobrodošli v PdfCraftu
 	What word or phrase would you like to search for?	Katero besedo ali besedno zvezo želite poiskati?
 	Whole words only	Samo cele besede
 	Width	Širina

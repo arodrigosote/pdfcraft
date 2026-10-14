@@ -130,7 +130,7 @@
 	Next page	Következő oldal
 	Previous page	Előző oldal
 	Current page — type a page number or label (such as iv) and press Enter	Aktuális oldal — írj be egy oldalszámot vagy címkét (például iv), majd nyomd meg az Entert
-	Welcome to ICASYS PDF	Üdvözöljük a ICASYS PDFban
+	Welcome to ICASYS PDF	Üdvözöljük a PdfCraftban
 	An open-source PDF workbench — local, private, and scriptable.	Nyílt forráskódú PDF-munkapad — helyi, privát és parancsfájlokkal vezérelhető.
 	ICASYS Community	ICASYS közösség
 	Visit the ICASYS website for help and information.	Segítségért és információkért látogasson el az ICASYS weboldalára.
@@ -138,7 +138,7 @@
 	Use now	Használat most
 	Open file	Fájl megnyitása
 	Recent	Legutóbbiak
-	Files you open in ICASYS PDF appear here. Drop a PDF anywhere to open it.	A ICASYS PDFban megnyitott fájlok itt jelennek meg. Húzz ide egy PDF-et a megnyitáshoz.
+	Files you open in ICASYS PDF appear here. Drop a PDF anywhere to open it.	A PdfCraftban megnyitott fájlok itt jelennek meg. Húzz ide egy PDF-et a megnyitáshoz.
 	Privacy	Adatvédelem
 	ICASYS PDF works offline. No telemetry, no account, and no cloud processing unless you add a provider.	A ICASYS PDF offline működik. Nincs telemetria, nincs fiók, és nincs felhőfeldolgozás, amíg nem adsz hozzá szolgáltatót.
 	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	A szkriptek homokozóban futnak, fájl- és hálózat-hozzáférés nélkül. Kikapcsolt JavaScript mellett az Acrobat szabványos formázó, ellenőrző és számoló függvényei továbbra is működnek.
@@ -282,7 +282,7 @@
 	ICASYS PDF on GitHub	ICASYS PDF a GitHubon
 	ICASYS Website	ICASYS weboldal
 	Check for updates…	Frissítések keresése…
-	About ICASYS PDF	A ICASYS PDFról
+	About ICASYS PDF	A PdfCraftról
 	Export a PDF	PDF exportálása
 	Export to	Exportálás ide
 	Microsoft Word (.docx)	Microsoft Word (.docx)
@@ -855,8 +855,8 @@
 	No changes allowed	Semmilyen módosítás nem engedélyezett
 	Annotations, form fill-in, and digital signatures	Széljegyzetek, űrlapkitöltés és digitális aláírások
 	Form fill-in and digital signatures	Űrlapkitöltés és digitális aláírások
-	The key is in the macOS Keychain, which may ask to allow ICASYS PDF to use it.	A kulcs a macOS Kulcskarikában van, amely megkérdezheti, engedélyezed-e a ICASYS PDFnak a használatát.
-	The key is in the Windows certificate store, which may ask to allow ICASYS PDF to use it.	A kulcs a Windows tanúsítványtárolójában van, amely megkérdezheti, engedélyezed-e a ICASYS PDFnak a használatát.
+	The key is in the macOS Keychain, which may ask to allow ICASYS PDF to use it.	A kulcs a macOS Kulcskarikában van, amely megkérdezheti, engedélyezed-e a PdfCraftnak a használatát.
+	The key is in the Windows certificate store, which may ask to allow ICASYS PDF to use it.	A kulcs a Windows tanúsítványtárolójában van, amely megkérdezheti, engedélyezed-e a PdfCraftnak a használatát.
 	Digital ID password	A digitális azonosító jelszava
 	Back	Vissza
 	Validate all	Összes ellenőrzése
@@ -1215,7 +1215,7 @@
 	Downsample to	Feloldás csökkentése erre
 	Also recognize pages that already have text	A már szöveget tartalmazó oldalak felismerése is
 	Pictures on those pages are recognized too; words already in the page's text are not added again	Az ezeken az oldalakon lévő képeket is felismeri; az oldal szövegében már szereplő szavakat nem adja hozzá újra
-	Text recognition isn't installed: its model files are missing. Reinstall ICASYS PDF, or set PDFCRAFT_MODELS to the folder that holds them.	A szövegfelismerés nincs telepítve: hiányoznak a modellfájljai. Telepítsd újra a ICASYS PDFot, vagy állítsd a PDFCRAFT_MODELS változót az őket tartalmazó mappára.
+	Text recognition isn't installed: its model files are missing. Reinstall ICASYS PDF, or set PDFCRAFT_MODELS to the folder that holds them.	A szövegfelismerés nincs telepítve: hiányoznak a modellfájljai. Telepítsd újra a PdfCraftot, vagy állítsd a PDFCRAFT_MODELS változót az őket tartalmazó mappára.
 	Settings	Beállítások
 	Optional	Nem kötelező
 	Planned · {m}	Tervezett · {m}
@@ -1745,7 +1745,7 @@
 	there are no pages to print	nincs nyomtatható oldal
 	the document has no tags	a dokumentumnak nincs címkéje
 	{0}: {1}	{0}: {1}
-	the text recognition models are not installed (reinstall ICASYS PDF, or set PDFCRAFT_MODELS to the folder that holds them)	a szövegfelismerés modelljei nincsenek telepítve (telepítsd újra a ICASYS PDFot, vagy állítsd a PDFCRAFT_MODELS változót az őket tartalmazó mappára)
+	the text recognition models are not installed (reinstall ICASYS PDF, or set PDFCRAFT_MODELS to the folder that holds them)	a szövegfelismerés modelljei nincsenek telepítve (telepítsd újra a PdfCraftot, vagy állítsd a PDFCRAFT_MODELS változót az őket tartalmazó mappára)
 	the image is empty	a kép üres
 	this file isn't XFDF, FDF, XML or text form data	ez a fájl nem XFDF, FDF, XML vagy szöveges űrlapadat
 	nothing in the file matches this document	a fájlban semmi sem illeszkedik ehhez a dokumentumhoz
