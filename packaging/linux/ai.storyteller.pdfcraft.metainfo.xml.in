@@ -5,7 +5,7 @@
   <id>ai.storyteller.pdfcraft</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
-  <name>PdfCraft</name>
+  <name>ICASYS PDF</name>
   <summary>Read, organize, combine, split and secure PDFs</summary>
   <developer id="ai.storyteller">
     <name>Learning Machines LLC</name>
@@ -19,10 +19,10 @@
   <launchable type="desktop-id">ai.storyteller.pdfcraft.desktop</launchable>
   <icon type="stock">ai.storyteller.pdfcraft</icon>
   <!-- Only url types known to appstream 0.15 (Ubuntu 22.04, where CI validates): no vcs-browser. -->
-  <url type="homepage">https://getartcraft.com/apps/pdfcraft</url>
-  <url type="bugtracker">https://github.com/storytold/pdfcraft/issues</url>
-  <url type="help">https://github.com/storytold/pdfcraft</url>
-  <url type="contact">https://discord.gg/artcraft</url>
+  <url type="homepage">https://icasys.mx</url>
+  <url type="bugtracker">https://github.com/arodrigosote/pdfcraft/issues</url>
+  <url type="help">https://github.com/arodrigosote/pdfcraft</url>
+  <url type="contact">https://icasys.mx</url>
   <categories>
     <category>Office</category>
     <category>Viewer</category>
@@ -36,7 +36,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>A PDF open with its threaded comments</caption>
-      <image>https://raw.githubusercontent.com/storytold/pdfcraft/main/docs/images/pdfcraft-viewer.png</image>
+      <image>https://raw.githubusercontent.com/arodrigosote/pdfcraft/main/docs/images/pdfcraft-viewer.png</image>
     </screenshot>
   </screenshots>
   <branding>

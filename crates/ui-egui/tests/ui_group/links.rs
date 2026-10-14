@@ -23,19 +23,19 @@ fn discord_button_in_the_top_bar_opens_discord() {
     h.get_by_label("Discord").click();
     h.run_steps(2);
     assert_eq!(h.state().last_opened_url.as_deref(), Some(links::DISCORD));
-    assert_eq!(links::DISCORD, "https://discord.gg/artcraft");
+    assert_eq!(links::DISCORD, "https://icasys.mx");
 }
 
 #[test]
 fn home_screen_links() {
     for (label, url) in [
-        ("Join our Discord", links::DISCORD),
-        ("PdfCraft web page", "https://getartcraft.com/apps/pdfcraft"),
-        ("PdfCraft on GitHub", "https://github.com/storytold/pdfcraft"),
-        ("ArtCraft website", "https://getartcraft.com"),
+        ("Visit ICASYS", links::DISCORD),
+        ("ICASYS PDF web page", "https://icasys.mx"),
+        ("ICASYS PDF on GitHub", "https://github.com/arodrigosote/pdfcraft"),
+        ("ICASYS Website", "https://icasys.mx"),
     ] {
         let mut h = harness(|_| {});
-        h.get_by_label("Join the ArtCraft community");
+        h.get_by_label("ICASYS Community");
         h.get_by_label(label).click();
         h.run_steps(2);
         assert_eq!(h.state().last_opened_url.as_deref(), Some(url), "{label}");
@@ -51,7 +51,7 @@ fn about_dialog_shows_the_brand_and_links() {
         app.dialog = Some(Dialog::About);
     });
     assert!(h.query_all_by_label("ArtCraft").count() >= 2, "the mark and the wordmark (alt text)");
-    h.get_by_label("Join our Discord").click();
+    h.get_by_label("Visit ICASYS").click();
     h.run_steps(2);
     assert_eq!(h.state().last_opened_url.as_deref(), Some(links::DISCORD));
 }

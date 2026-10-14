@@ -58,3 +58,9 @@ dependencies change (plan/adr/0002, 0006).
 Vendored (vendor/, patched; see vendor/README.md):
 - hayro 0.7.1 — Apache-2.0 OR MIT, Copyright the hayro authors (licence files kept in vendor/hayro).
 - hayro-interpret 0.7.0 — Apache-2.0 OR MIT, Copyright the hayro authors (LICENSE-APACHE, LICENSE-MIT kept in vendor/hayro-interpret).
+
+ICASYS edition
+
+This is a modified version of PdfCraft, published by ICASYS (https://icasys.mx).
+It is based on PdfCraft by the ArtCraft team and community. The ArtCraft name and logos are not used.
+See ICASYS.md.

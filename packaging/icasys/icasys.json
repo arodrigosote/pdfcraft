@@ -1,0 +1,8 @@
+{
+  "app": "pdfcraft",
+  "name": "ICASYS PDF",
+  "slug": "pdf",
+  "upstream_name": "PdfCraft",
+  "upstream_base": "3f044b6263aa6605c3aa44ca6d065e1ab37d13b6",
+  "owner": "arodrigosote"
+}
