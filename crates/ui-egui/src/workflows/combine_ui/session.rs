@@ -402,7 +402,7 @@ impl PdfCraftApp {
     }
 
     /// Add the files at `paths` to the Combine files list and show it: `pdfcraft --combine` and
-    /// File Explorer's "Combine files in PdfCraft" (#585), where each selected file arrives as a
+    /// File Explorer's "Combine files in ICASYS PDF" (#585), where each selected file arrives as a
     /// launch of its own and the running PdfCraft collects them here. Nothing to add shows the
     /// tab all the same.
     #[cfg(not(target_arch = "wasm32"))]

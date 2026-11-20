@@ -12,7 +12,7 @@ pub enum OsEvent {
     /// Open these files.
     Open(Vec<String>),
     /// Add these files to Combine files and show it (`pdfcraft --combine`, File Explorer's
-    /// "Combine files in PdfCraft", #585).
+    /// "Combine files in ICASYS PDF", #585).
     Combine(Vec<String>),
     /// Quit (the Dock's Quit, logging out), asking about unsaved changes first.
     Quit,

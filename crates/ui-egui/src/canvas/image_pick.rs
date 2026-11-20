@@ -339,8 +339,8 @@ pub(crate) fn safe_name(s: &str) -> String {
 
 /// The per-user folder that holds the file of the last Copy Image in Original Format: `Clipboard`
 /// in the portable data folder in portable mode ([`crate::portable`]), otherwise the platform's
-/// per-user cache folder: `~/Library/Caches/PdfCraft/Clipboard` (macOS),
-/// `%LOCALAPPDATA%\PdfCraft\Clipboard` (Windows), or `$XDG_CACHE_HOME/pdfcraft/clipboard` /
+/// per-user cache folder: `~/Library/Caches/ICASYS PDF/Clipboard` (macOS),
+/// `%LOCALAPPDATA%\ICASYS PDF\Clipboard` (Windows), or `$XDG_CACHE_HOME/pdfcraft/clipboard` /
 /// `~/.cache/pdfcraft/clipboard` (others). Never the shared temporary folder, where another user
 /// could plant a link or a folder of their own.
 #[cfg(not(target_arch = "wasm32"))]
@@ -374,7 +374,7 @@ fn is_copied_image_name(name: &str) -> bool {
 }
 
 /// Makes `dir` (a real folder, not a link, owned by us and private to us on Unix), removes the
-/// earlier copies PdfCraft wrote there, and writes `bytes` as a new file `name`. Links are never
+/// earlier copies ICASYS PDF wrote there, and writes `bytes` as a new file `name`. Links are never
 /// followed and nothing else in the folder is touched.
 #[cfg(not(target_arch = "wasm32"))]
 fn write_clipboard_file(dir: &std::path::Path, name: &str, bytes: &[u8]) -> Result<std::path::PathBuf, String> {
@@ -470,7 +470,7 @@ impl PdfCraftApp {
         }
     }
 
-    /// Writes `bytes` to PdfCraft's private clipboard folder ([`clipboard_dir`]), replacing the
+    /// Writes `bytes` to ICASYS PDF's private clipboard folder ([`clipboard_dir`]), replacing the
     /// previous copy, and puts that file on the system clipboard.
     #[cfg(not(target_arch = "wasm32"))]
     fn put_file_on_clipboard(&self, name: &str, bytes: &[u8]) -> Result<(), String> {

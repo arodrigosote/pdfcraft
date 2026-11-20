@@ -51,7 +51,7 @@ fn annots_with_replies(doc: &Document, which: &[(usize, usize)]) -> HashSet<(usi
 /// Every comment as an XFDF element (one line per comment, replies included), or only those at
 /// the positions in `only`.
 /// The namespace of PdfCraft's own attributes in XFDF (`pdfcraft:keys`): other readers skip them.
-pub(crate) const PDFCRAFT_NS: &str = "https://github.com/storytold/pdfcraft#xfdf";
+pub(crate) const PDFCRAFT_NS: &str = "https://github.com/arodrigosote/pdfcraft#xfdf";
 /// At most this much text in a `pdfcraft:keys` attribute is read.
 const MAX_OWN_KEYS: usize = 64 * 1024;
 

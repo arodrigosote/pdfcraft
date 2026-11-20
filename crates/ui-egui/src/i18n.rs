@@ -560,12 +560,12 @@ pub fn tr_ctx<'a>(lang: Lang, context: &str, s: &'a str) -> &'a str {
 }
 
 /// A string keyed by its command id, falling back to the translation of the English `label`. Only
-/// PdfCraft's own `@id` rows count ([`own_id`]).
+/// ICASYS PDF's own `@id` rows count ([`own_id`]).
 pub fn tr_id<'a>(lang: Lang, id: &str, label: &'a str) -> &'a str {
     if own_id(lang, id, label) { lang.i18n().tid(lang.lang, id, label) } else { tr(lang, label) }
 }
 
-/// Whether `lang` has PdfCraft's own `@id` row for `id` ([`Lang::has_own`]: command ids are each
+/// Whether `lang` has ICASYS PDF's own `@id` row for `id` ([`Lang::has_own`]: command ids are each
 /// app's own) and it keeps the `{placeholders}` and trailing `…` of the English `label`. craft-i18n
 /// can't check that, because an `@id` row's source is the id, so a row that doesn't is skipped
 /// here and the label's translation shows instead.
@@ -671,7 +671,7 @@ pub fn command_label(text: &str) -> String {
     t(text).to_owned()
 }
 
-/// A registered command's menu label: its `@id` entry in PdfCraft's own catalog if there is one
+/// A registered command's menu label: its `@id` entry in ICASYS PDF's own catalog if there is one
 /// that keeps the label's shape ([`own_id`]), otherwise [`command_label`] of the current English
 /// label.
 pub fn menu_label(id: &str, label: &str) -> String {
@@ -684,7 +684,7 @@ pub fn menu_label(id: &str, label: &str) -> String {
 
 /// A plural-aware message: `one`/`other` are the English forms (with `{n}` where the count goes).
 /// The form is the language's CLDR category; `{n}` is written in `0`–`9` without grouping or
-/// isolate marks, as PdfCraft always has.
+/// isolate marks, as ICASYS PDF always has.
 pub fn trn(lang: Lang, n: u64, one: &str, other: &str) -> String {
     lang.i18n().trn_plain(lang.lang, n, one, other)
 }
@@ -710,7 +710,7 @@ fn name_sort_key(name: &str) -> String {
         .collect()
 }
 
-/// A test language whose PdfCraft catalog is `source` (catalog format), so tests of lookup code
+/// A test language whose ICASYS PDF catalog is `source` (catalog format), so tests of lookup code
 /// don't depend on the embedded catalogs' wording. `code` picks the CLDR plural rules.
 #[cfg(test)]
 pub(crate) fn fixture_lang(code: &'static str, source: &'static str) -> Lang {
