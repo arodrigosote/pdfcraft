@@ -1,0 +1,18 @@
+{
+  "app": "pdfcraft",
+  "name": "ICASYS PDF",
+  "slug": "pdf",
+  "upstream_name": "PdfCraft",
+  "upstream_base": "b503b2e62dfeec5598f344e4e287d9c9cbdb34fa",
+  "owner": "arodrigosote",
+  "es_ui": true,
+  "deb_section": "editors",
+  "cli": "pdfcraft-cli",
+  "mcp": {
+    "headless": "mcp",
+    "attach": "",
+    "auth": "none",
+    "project": ""
+  },
+  "craft_i18n_rev": "575cfdef63227b14daf173b8cc87928bfdfa325e"
+}

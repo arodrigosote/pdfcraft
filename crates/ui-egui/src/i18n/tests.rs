@@ -117,7 +117,7 @@ fn candidates_walk_from_specific_to_general() {
 }
 
 /// The locale variables, the first detection step: `LC_ALL` over `LC_MESSAGES` over `LANG`, an
-/// unsupported value passed over, and PdfCraft's own mappings (`no`/`nn` → Bokmål, Portuguese →
+/// unsupported value passed over, and ICASYS PDF's own mappings (`no`/`nn` → Bokmål, Portuguese →
 /// Brazilian, Chinese by region), which the crate's matching doesn't all make.
 #[cfg(not(target_arch = "wasm32"))]
 #[test]
@@ -241,11 +241,11 @@ fn the_languages_offered_are_the_embedded_ones_of_the_list() {
         return;
     }
     let listed: Vec<&str> = LANGUAGES.iter().map(|l| l.code).collect();
-    assert_eq!(all, listed, "every language PdfCraft lists has its catalog in craft-i18n");
+    assert_eq!(all, listed, "every language ICASYS PDF lists has its catalog in craft-i18n");
     assert!(Lang::from_code("pseudo").is_none(), "the pseudo locale is never a setting");
     // craft-i18n has catalogs PdfCraft doesn't offer (yet); they are never offered here.
     for code in CRAFT_I18N.iter().map(|(c, ..)| *c).filter(|c| !listed.contains(c)) {
-        assert_eq!(Lang::from_code(code), None, "{code} is not one of PdfCraft's languages");
+        assert_eq!(Lang::from_code(code), None, "{code} is not one of ICASYS PDF's languages");
     }
 }
 
@@ -632,7 +632,7 @@ fn plural_forms_follow_the_rules_pdfcraft_had() {
             (1..=6).map(|f| (f, fixture(f))).find(|(_, l)| trn(*l, 5, "{n} x", "{n} xs").starts_with('F')).expect("a form count loads");
         if forms != pdfcraft_forms {
             split.push((info.code, pdfcraft_forms, forms));
-            assert_eq!(pdfcraft_forms, 1, "{}: PdfCraft listed {pdfcraft_forms} forms, CLDR {forms}", info.code);
+            assert_eq!(pdfcraft_forms, 1, "{}: ICASYS PDF listed {pdfcraft_forms} forms, CLDR {forms}", info.code);
             continue;
         }
         for n in plural_counts() {
@@ -640,7 +640,7 @@ fn plural_forms_follow_the_rules_pdfcraft_had() {
         }
     }
     let codes: Vec<&str> = split.iter().map(|(c, ..)| *c).collect();
-    assert_eq!(codes, ["tr", "hi"], "the languages CLDR gives more forms than PdfCraft had");
+    assert_eq!(codes, ["tr", "hi"], "the languages CLDR gives more forms than ICASYS PDF had");
     if !needs_catalogs() {
         return;
     }
@@ -1296,7 +1296,7 @@ fn arabic_catalog_stays_logical() {
     needs_catalogs!();
     let ar = arabic();
     assert_eq!(tr(ar, "Save as…"), "حفظ باسم…");
-    assert_eq!(tr(ar, "About PdfCraft"), "حول PdfCraft");
+    assert_eq!(tr(ar, "About ICASYS PDF"), "حول ICASYS PDF");
     assert_eq!(tr(ar, "Name:"), "الاسم:");
     assert_eq!(tr(ar, "Issued by: "), "صادرة عن: ");
     // Placeholders survive in their logical positions.

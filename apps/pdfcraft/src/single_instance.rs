@@ -340,7 +340,7 @@ fn hand_off(stream: &UnixStream, files: &[String], combine: bool) -> std::io::Re
     writer.write_all(request(files, combine).as_bytes())?;
     let mut reply = String::new();
     std::io::BufReader::new(stream.take(16)).read_line(&mut reply)?;
-    if reply == "ok\n" { Ok(()) } else { Err(std::io::Error::other("the running PdfCraft didn't confirm")) }
+    if reply == "ok\n" { Ok(()) } else { Err(std::io::Error::other("the running ICASYS PDF didn't confirm")) }
 }
 
 /// Accept launches on a background thread for as long as the process runs.

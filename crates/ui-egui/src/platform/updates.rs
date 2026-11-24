@@ -10,7 +10,7 @@ use craft_update::{CheckResultDialog, CheckResultResponse};
 use crate::PdfCraftApp;
 
 /// Where every PdfCraft release is listed.
-pub const RELEASES_PAGE: &str = "https://github.com/storytold/pdfcraft/releases";
+pub const RELEASES_PAGE: &str = "https://github.com/arodrigosote/pdfcraft/releases";
 
 /// Stands in for the network in tests.
 #[cfg(not(target_arch = "wasm32"))]
@@ -55,7 +55,7 @@ impl Default for Updates {
     fn default() -> Self {
         Self {
             #[cfg(not(target_arch = "wasm32"))]
-            updater: Updater::new(&crate::UPDATE_APP, env!("CARGO_PKG_VERSION")),
+            updater: Updater::new(&crate::UPDATE_APP, env!("CARGO_PKG_VERSION")).with_source(::std::sync::Arc::new(|| -> ::std::result::Result<::std::option::Option<::craft_update::Release>, ::std::string::String> { Err(::std::string::String::from("ICASYS apps are updated by ICASYS: https://icasys.mx / Las apps de ICASYS se actualizan desde ICASYS: https://icasys.mx")) })),
             open: false,
             #[cfg(not(target_arch = "wasm32"))]
             startup_check: false,
@@ -119,7 +119,7 @@ impl PdfCraftApp {
     /// Replaces the network with `source` (tests).
     #[cfg(not(target_arch = "wasm32"))]
     pub fn set_update_source(&mut self, source: UpdateSource) {
-        self.updates.updater = Updater::new(&crate::UPDATE_APP, env!("CARGO_PKG_VERSION")).with_source(source);
+        self.updates.updater = Updater::new(&crate::UPDATE_APP, env!("CARGO_PKG_VERSION")).with_source(::std::sync::Arc::new(|| -> ::std::result::Result<::std::option::Option<::craft_update::Release>, ::std::string::String> { Err(::std::string::String::from("ICASYS apps are updated by ICASYS: https://icasys.mx / Las apps de ICASYS se actualizan desde ICASYS: https://icasys.mx")) })).with_source(source);
     }
 
     /// Help ▸ Check for updates: ask for the latest release and show the outcome.
@@ -323,8 +323,8 @@ mod tests {
         app.updates.updater.offer(craft_update::Release {
             tag: "v99.0.0".into(),
             version: craft_update::parse_version("99.0.0"),
-            name: "PdfCraft 99.0.0".into(),
-            html_url: "https://github.com/storytold/pdfcraft/releases/tag/v99.0.0".into(),
+            name: "ICASYS PDF 99.0.0".into(),
+            html_url: "https://github.com/arodrigosote/pdfcraft/releases/tag/v99.0.0".into(),
             ..Default::default()
         });
         assert!(app.updates.updater.prompt_open());

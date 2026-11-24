@@ -13,7 +13,7 @@ use crate::{Dialog, Mode, PdfCraftApp, PropsTab, RightPanel, icons, widgets, win
 /// lights itself, centred in the standard 28 pt title-bar band at the top of the window, and moving
 /// them takes AppKit calls the workspace forbids (`unsafe`). So on macOS the strip is that band:
 /// the lights sit vertically centred in it, and the controls beside them shrink to fit, as in
-/// WordCraft (storytold/wordcraft#255).
+/// WordCraft (arodrigosote/wordcraft#255).
 pub const MAC_TITLE_BAR: f32 = 28.0;
 /// The traffic lights as AppKit lays them out: button diameter, centre-to-centre pitch and the
 /// first button's left edge (8–10 pt depending on the macOS version; the larger value keeps the
@@ -73,7 +73,7 @@ pub fn tab_strip(app: &mut PdfCraftApp, ui: &mut egui::Ui) {
                     app.combine_tab.focused = false;
                 }
                 // Reserve the three icon buttons, Discord and their gaps outside the scrolling tabs.
-                let controls_width = ui.fonts_mut(|f| f.layout_no_wrap("Discord".into(), theme::medium(13.0), t.text).size().x)
+                let controls_width = ui.fonts_mut(|f| f.layout_no_wrap("ICASYS Community".into(), theme::medium(13.0), t.text).size().x)
                     + 3.0 * button
                     + 54.0
                     + window_controls::width(&controls.right);
@@ -276,7 +276,7 @@ pub fn tab_strip(app: &mut PdfCraftApp, ui: &mut egui::Ui) {
                         app.dialog = Some(Dialog::Shortcuts);
                     }
                     // One click to the community, from anywhere in the app.
-                    if widgets::ghost_button_sized(ui, "messages-square", "Discord", tab_h).on_hover_text(pdfcraft_engine::links::DISCORD).clicked() {
+                    if widgets::ghost_button_sized(ui, "messages-square", "ICASYS Community", tab_h).on_hover_text(pdfcraft_engine::links::DISCORD).clicked() {
                         app.execute("help.discord");
                     }
                 });
